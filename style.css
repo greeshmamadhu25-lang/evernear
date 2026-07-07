@@ -24,3 +24,13 @@ p {
   line-height: 1.7;
   color: #6a5b78;
 }
+.container {
+  width: min(90%, 700px);
+  padding: 3rem;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+}
