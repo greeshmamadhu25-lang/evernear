@@ -116,3 +116,10 @@ p {
 .enter-btn:active {
   transform: scale(0.97);
 }
+.message-title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 1rem 0 0.8rem;
+  color: #4b3b5c;
+}
