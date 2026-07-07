@@ -6,7 +6,7 @@ body {
   justify-content: center;
   align-items: center;
   background: linear-gradient(135deg, #f8f5ff, #fef6f9);
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Inter", sans-serif;
   color: #3b2f4a;
   text-align: center;
 }
