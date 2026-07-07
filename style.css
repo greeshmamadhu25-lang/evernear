@@ -12,9 +12,13 @@ body {
 }
 
 h1 {
-  font-size: 4rem;
+
+  font-family: "Cormorant Garamond", serif;
+  font-size: 5rem;
+  font-weight: 600;
+  letter-spacing: 1px;
   margin-bottom: 0.5rem;
-  font-weight: normal;
+
 }
 
 p {
