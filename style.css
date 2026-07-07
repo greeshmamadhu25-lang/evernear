@@ -123,3 +123,11 @@ p {
   margin: 1rem 0 0.8rem;
   color: #4b3b5c;
 }
+.section-title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: #3b2f4a;
+}
