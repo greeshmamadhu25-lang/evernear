@@ -101,3 +101,15 @@ p {
   transform: translateY(-3px);
   box-shadow: 0 15px 35px rgba(159, 122, 234, 0.45);
 }
+#message {
+  min-height: 80px;
+  margin: 2rem 0;
+  padding: 1.5rem;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  color: #4b3b5c;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  transition: all 0.3s ease;
+}
