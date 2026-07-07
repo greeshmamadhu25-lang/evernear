@@ -113,3 +113,6 @@ p {
   line-height: 1.8;
   transition: all 0.3s ease;
 }
+.enter-btn:active {
+  transform: scale(0.97);
+}
