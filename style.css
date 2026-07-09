@@ -150,3 +150,11 @@ p {
   color: #3b2f4a;
   letter-spacing: 1px;
 }
+.content-card {
+  margin-top: 2rem;
+  padding: 2rem;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
