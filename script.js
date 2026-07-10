@@ -17,3 +17,20 @@ button.addEventListener("click", () => {
   const randomIndex = Math.floor(Math.random() * messages.length);
   message.textContent = messages[randomIndex];
 });
+const letterButtons = document.querySelectorAll(".open-letter-btn");
+
+letterButtons.forEach(button => {
+    button.addEventListener("click", () => {
+
+        const letter = button.nextElementSibling;
+
+        if (letter.style.display === "none") {
+            letter.style.display = "block";
+            button.textContent = "Close Letter";
+        } else {
+            letter.style.display = "none";
+            button.textContent = "Open Letter";
+        }
+
+    });
+});
