@@ -32,3 +32,18 @@ letterButtons.forEach(button => {
     }
   });
 });
+const finalButton = document.querySelector(".final-btn");
+
+if (finalButton) {
+    finalButton.addEventListener("click", () => {
+        const message = document.getElementById("finalMessage");
+
+        message.classList.toggle("open");
+
+        if (message.classList.contains("open")) {
+            finalButton.textContent = "Close";
+        } else {
+            finalButton.textContent = "One Last Thing...";
+        }
+    });
+}
