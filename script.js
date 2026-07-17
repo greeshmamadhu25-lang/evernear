@@ -20,17 +20,15 @@ button.addEventListener("click", () => {
 const letterButtons = document.querySelectorAll(".open-letter-btn");
 
 letterButtons.forEach(button => {
-    button.addEventListener("click", () => {
+  button.addEventListener("click", () => {
+    const letter = button.nextElementSibling;
 
-        const letter = button.nextElementSibling;
+    letter.classList.toggle("open");
 
-        if (letter.style.display === "none") {
-            letter.style.display = "block";
-            button.textContent = "Close Letter";
-        } else {
-            letter.style.display = "none";
-            button.textContent = "Open Letter";
-        }
-
-    });
+    if (letter.classList.contains("open")) {
+      button.textContent = "Close Letter";
+    } else {
+      button.textContent = "Open Letter";
+    }
+  });
 });
