@@ -289,6 +289,9 @@ p {
   transform: translateY(-4px);
   box-shadow: 0 18px 40px rgba(0,0,0,0.12);
 }
+.letter-envelope:active {
+  transform: scale(0.97);
+}
 .letter-envelope {
   background: linear-gradient(135deg, #9f7aea, #ec4899);
   color: white;
