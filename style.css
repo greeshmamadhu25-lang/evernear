@@ -320,3 +320,9 @@ p {
   transform: translateY(-3px);
   box-shadow: 0 12px 25px rgba(159,122,234,0.35);
 }
+.letter-content p {
+  text-align: left;
+  line-height: 2;
+  color: #4b3b5c;
+  white-space: pre-line;
+}
