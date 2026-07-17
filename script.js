@@ -13,10 +13,12 @@ const messages = [
 const button = document.querySelector(".enter-btn");
 const message = document.getElementById("message");
 
-button.addEventListener("click", () => {
-  const randomIndex = Math.floor(Math.random() * messages.length);
-  message.textContent = messages[randomIndex];
-});
+if (button && message) {
+  button.addEventListener("click", () => {
+    const randomIndex = Math.floor(Math.random() * messages.length);
+    message.textContent = messages[randomIndex];
+  });
+}
 const letterButtons = document.querySelectorAll(".open-letter-btn");
 
 letterButtons.forEach(button => {
