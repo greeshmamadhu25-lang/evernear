@@ -173,7 +173,7 @@ p {
 }
 .content-card {
   margin-top: 2rem;
-  padding: 2rem;
+  padding: 2.8rem;
   border-radius: 20px;
   background: rgba(255, 255, 255, 0.25);
   border: 1px solid rgba(255, 255, 255, 0.35);
@@ -321,8 +321,11 @@ p {
   box-shadow: 0 12px 25px rgba(159,122,234,0.35);
 }
 .letter-content p {
-  text-align: left;
-  line-height: 2;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.35rem;
+  line-height: 2.1;
   color: #4b3b5c;
+  text-align: left;
   white-space: pre-line;
+  margin: 0;
 }
