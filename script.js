@@ -26,9 +26,9 @@ letterButtons.forEach(button => {
     letter.classList.toggle("open");
 
     if (letter.classList.contains("open")) {
-      button.textContent = "Close Letter";
+      button.textContent = "📨 Close Letter";
     } else {
-      button.textContent = "Open Letter";
+      button.textContent = "📩 Open Letter";
     }
   });
 });
