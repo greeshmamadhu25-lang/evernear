@@ -289,3 +289,19 @@ p {
   transform: translateY(-4px);
   box-shadow: 0 18px 40px rgba(0,0,0,0.12);
 }
+.letter-envelope {
+  background: linear-gradient(135deg, #9f7aea, #ec4899);
+  color: white;
+  border: none;
+  border-radius: 999px;
+  padding: 14px 28px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.letter-envelope:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(159,122,234,0.35);
+}
