@@ -10,11 +10,11 @@ const messages = [
   "You mean more to me than words can say."
 ];
 
-const button = document.querySelector(".enter-btn");
 const message = document.getElementById("message");
+const smileButton = message ? message.previousElementSibling : null;
 
-if (button && message) {
-  button.addEventListener("click", () => {
+if (smileButton && message) {
+  smileButton.addEventListener("click", () => {
     const randomIndex = Math.floor(Math.random() * messages.length);
     message.textContent = messages[randomIndex];
   });
