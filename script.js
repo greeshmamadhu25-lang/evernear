@@ -9,7 +9,7 @@ const messages = [
   "I'm really proud of you.",
   "You mean more to me than words can say."
 ];
-
+ 
 const message = document.getElementById("message");
 const smileButton = document.getElementById("smile-btn");
 if (smileButton && message) {
