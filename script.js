@@ -11,8 +11,7 @@ const messages = [
 ];
 
 const message = document.getElementById("message");
-const smileButton = message ? message.previousElementSibling : null;
-
+const smileButton = document.getElementById("smile-btn");
 if (smileButton && message) {
   smileButton.addEventListener("click", () => {
     const randomIndex = Math.floor(Math.random() * messages.length);
