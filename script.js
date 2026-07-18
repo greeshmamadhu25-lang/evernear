@@ -49,3 +49,11 @@ if (finalButton) {
         }
     });
 }
+const popup = document.getElementById("welcome-popup");
+const beginBtn = document.getElementById("begin-btn");
+
+if (popup && beginBtn) {
+  beginBtn.addEventListener("click", () => {
+    popup.style.display = "none";
+  });
+}
