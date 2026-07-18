@@ -18,7 +18,7 @@ console.log("Message:", message);
 
 if (smileButton && message) {
   smileButton.addEventListener("click", () => {
-    alert("Button clicked!");
+    
 
     const randomIndex = Math.floor(Math.random() * messages.length);
     message.textContent = messages[randomIndex];
