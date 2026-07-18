@@ -61,5 +61,8 @@ if (popup && beginBtn) {
   beginBtn.addEventListener("click", () => {
     sessionStorage.setItem("popupShown", "true");
     popup.style.display = "none";
+    const popup = document.getElementById("welcome-popup");
+const beginBtn = document.getElementById("begin-btn");
+...
   });
 }
