@@ -1,4 +1,4 @@
-
+alert("Script is working!");
 const messages = [
   "I'm so lucky to have you mr and you too. ❤️",
   "I hope you smiled today.",
