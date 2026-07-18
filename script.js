@@ -54,15 +54,12 @@ const beginBtn = document.getElementById("begin-btn");
 
 if (popup && beginBtn) {
 
-  // If the popup has already been shown this session, hide it
-  if (sessionStorage.getItem("popupShown")) {
+  if (sessionStorage.getItem("popupShown") === "true") {
     popup.style.display = "none";
   }
 
   beginBtn.addEventListener("click", () => {
-    popup.style.display = "none";
-
-    // Remember that the popup has been shown
     sessionStorage.setItem("popupShown", "true");
+    popup.style.display = "none";
   });
 }
