@@ -359,7 +359,7 @@ p {
     gap: 1rem;
   }
 
-  .nav-links {
+  .nav-links { 
     flex-wrap: wrap;
     justify-content: center;
     gap: 1rem;
