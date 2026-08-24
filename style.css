@@ -100,11 +100,11 @@ p {
 }
 .enter-btn {
   display: inline-block;
-  margin-top: 2.5rem;
-  padding: 0.9rem 2.2rem;
+  margin-top: 2rem;
+  padding: 0.7rem 1.8rem;
   border-radius: 999px;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: 500;
   color: #ffffff;
   background: linear-gradient(135deg, #9f7aea, #ec4899);
