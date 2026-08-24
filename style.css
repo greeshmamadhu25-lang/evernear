@@ -365,12 +365,16 @@ p {
     gap: 1rem;
   }
 
-  .enter-btn,
-.letter-envelope {
-  width: auto;
-  max-width: 280px;
+  .enter-btn {
+  width: fit-content !important;
+  max-width: 90%;
   padding: 0.7rem 1.8rem;
   font-size: 0.95rem;
+}
+
+.letter-envelope {
+  width: fit-content !important;
+  max-width: 90%;
 }
   .content-card {
     padding: 1.5rem;
