@@ -1,1 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>For Us, Someday</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <p class="small-text">For the days that haven't happened yet.</p>
+
+        <h1>For Us, Someday</h1>
+
+        <p class="intro">
+            Things we want to do together someday.
+        </p>
+
+        <div class="wish-box">
+
+            <div class="lock">🔐</div>
+
+            <h2>Our Wishes</h2>
+
+            <p>
+                These are the things we dream about doing together.
+                We can write them now...
+                but we'll read them together when we finally meet.
+            </p>
+
+            <div class="wish-count">
+                <span id="wishCount">0</span>
+                wishes waiting for us
+            </div>
+
+            <button onclick="showWishForm()">+ Add a wish</button>
+
+        </div>
+
+        <div id="wishForm" class="wish-form">
+
+            <textarea
+                id="wishInput"
+                placeholder="Something you want us to do together someday..."
+                maxlength="200">
+            </textarea>
+
+            <div class="form-buttons">
+                <button onclick="saveWish()">Save wish</button>
+                <button class="cancel" onclick="hideWishForm()">Cancel</button>
+            </div>
+
+        </div>
+
+        <div class="locked-message">
+
+            <div class="big-lock">🔒</div>
+
+            <h2>Not yet.</h2>
+
+            <p>
+                These wishes are staying locked for now.
+            </p>
+
+            <p>
+                When we're finally together,
+                we'll open them.
+            </p>
+
+        </div>
+
+        <button class="back-button" onclick="history.back()">
+            ← Back
+        </button>
+
+    </div>
+
+    <script>
+
+        let wishes = JSON.parse(localStorage.getItem("ourWishes")) || [];
+
+        updateWishCount();
+
+        function showWishForm() {
+            document.getElementById("wishForm").style.display = "block";
+            document.getElementById("wishInput").focus();
+        }
+
+        function hideWishForm() {
+            document.getElementById("wishForm").style.display = "none";
+            document.getElementById("wishInput").value = "";
+        }
+
+        function saveWish() {
+
+            const input = document.getElementById("wishInput");
+            const wish = input.value.trim();
+
+            if (wish === "") {
+                return;
+            }
+
+            wishes.push(wish);
+
+            localStorage.setItem(
+                "ourWishes",
+                JSON.stringify(wishes)
+            );
+
+            updateWishCount();
+            hideWishForm();
+        }
+
+        function updateWishCount() {
+
+            document.getElementById("wishCount").textContent =
+                wishes.length;
+        }
+
+    </script>
+
+</body>
+</html>
