@@ -32,6 +32,29 @@
             overflow-x: hidden;
         }
 
+        /* NAVIGATION */
+
+        nav {
+            position: fixed;
+            top: 25px;
+            right: 35px;
+            display: flex;
+            align-items: center;
+            gap: 22px;
+            z-index: 100;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #6d6375;
+            font-size: 12px;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #403848;
+        }
+
         /* floating background dots */
 
         .dot {
@@ -384,6 +407,16 @@
 
         @media (max-width: 600px) {
 
+            nav {
+                position: relative;
+                top: auto;
+                right: auto;
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 12px 18px;
+                margin-bottom: 25px;
+            }
+
             .page {
                 padding: 40px 15px;
             }
@@ -428,6 +461,7 @@
     </nav>
 
     <main class="page">
+
         <div class="tiny">
             A little place for our future
         </div>
@@ -439,7 +473,6 @@
             We can write them now.
             We just have to wait to read them together.
         </p>
-
 
         <section class="capsule">
 
@@ -456,7 +489,6 @@
                 For the day we finally meet.
             </p>
 
-
             <div class="count">
 
                 <span class="number" id="wishCount">
@@ -469,11 +501,9 @@
 
             </div>
 
-
             <button class="wish-button" onclick="openForm()">
                 + Leave a wish
             </button>
-
 
             <div class="wish-form" id="wishForm">
 
@@ -505,11 +535,9 @@
 
             </div>
 
-
             <div class="saved" id="savedMessage">
                 Sealed. 🔒
             </div>
-
 
             <div class="sealed">
 
@@ -529,12 +557,11 @@
 
         </section>
 
-
         <button class="back" onclick="window.location.href='index.html'">
-    ← go back
-</button>
-    </main>
+            ← go back
+        </button>
 
+    </main>
 
     <script>
 
@@ -542,7 +569,6 @@
             JSON.parse(localStorage.getItem("ourWishes")) || [];
 
         updateCount();
-
 
         function openForm() {
 
@@ -552,7 +578,6 @@
 
         }
 
-
         function closeForm() {
 
             document.getElementById("wishForm").style.display = "none";
@@ -560,7 +585,6 @@
             document.getElementById("wishInput").value = "";
 
         }
-
 
         function saveWish() {
 
@@ -570,7 +594,6 @@
             const wish =
                 input.value.trim();
 
-
             if (wish === "") {
 
                 input.focus();
@@ -578,7 +601,6 @@
                 return;
 
             }
-
 
             wishes.push({
 
@@ -588,12 +610,10 @@
 
             });
 
-
             localStorage.setItem(
                 "ourWishes",
                 JSON.stringify(wishes)
             );
-
 
             updateCount();
 
@@ -601,12 +621,10 @@
 
             document.getElementById("wishForm").style.display = "none";
 
-
             const saved =
                 document.getElementById("savedMessage");
 
             saved.style.display = "block";
-
 
             setTimeout(function() {
 
@@ -615,7 +633,6 @@
             }, 2500);
 
         }
-
 
         function updateCount() {
 
