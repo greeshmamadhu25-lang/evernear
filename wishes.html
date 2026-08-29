@@ -14,7 +14,7 @@
     <style>
 
         * {
-            box-sizing: border-box; 
+            box-sizing: border-box;
         }
 
         body {
@@ -58,6 +58,7 @@
 
             display: flex;
             align-items: center;
+
             gap: 30px;
 
             z-index: 1000;
@@ -112,6 +113,7 @@
             width: 100%;
 
             display: flex;
+
             justify-content: center;
             align-items: center;
 
@@ -120,6 +122,7 @@
 
         .content {
             width: 100%;
+
             max-width: 720px;
 
             text-align: center;
@@ -204,6 +207,7 @@
             margin: 0 auto 18px;
 
             display: flex;
+
             justify-content: center;
             align-items: center;
 
@@ -290,7 +294,7 @@
 
 
         /* =========================
-           GRADIENT BUTTON
+           BUTTON
         ========================= */
 
         .wish-button {
@@ -407,9 +411,37 @@
         }
 
         .cancel:hover {
-            box-shadow: none;
-
             background: #e3dbe9;
+
+            box-shadow: none;
+        }
+
+
+        /* =========================
+           SAVED MESSAGE
+        ========================= */
+
+        .saved {
+            display: none;
+
+            margin-top: 20px;
+
+            padding: 13px 18px;
+
+            border-radius: 30px;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    #eee3ff,
+                    #ffe5f2
+                );
+
+            color: #68567b;
+
+            font-family: "Cormorant Garamond", serif;
+
+            font-size: 21px;
         }
 
 
@@ -459,34 +491,6 @@
 
 
         /* =========================
-           SAVED MESSAGE
-        ========================= */
-
-        .saved {
-            display: none;
-
-            margin-top: 20px;
-
-            padding: 13px 18px;
-
-            border-radius: 30px;
-
-            background:
-                linear-gradient(
-                    90deg,
-                    #eee3ff,
-                    #ffe5f2
-                );
-
-            color: #68567b;
-
-            font-family: "Cormorant Garamond", serif;
-
-            font-size: 21px;
-        }
-
-
-        /* =========================
            BACK BUTTON
         ========================= */
 
@@ -516,80 +520,293 @@
 
 
         /* =========================
-           MOBILE
+           TABLET & MOBILE
         ========================= */
 
         @media (max-width: 700px) {
 
+            /* NAVIGATION */
+
             nav {
                 position: absolute;
 
-                top: 20px;
-                right: 20px;
+                top: 18px;
 
-                left: 20px;
+                left: 15px;
+                right: 15px;
 
                 justify-content: center;
 
-                gap: 20px;
-
                 flex-wrap: wrap;
+
+                gap: 12px 20px;
             }
 
             nav a {
-                font-size: 14px;
+                font-size: 13px;
             }
+
+            nav a.active::after {
+                bottom: -6px;
+
+                height: 2px;
+            }
+
+
+            /* PAGE */
 
             .page {
-                padding: 120px 15px 50px;
+                min-height: 100vh;
+
+                padding: 135px 15px 45px;
+
+                display: flex;
+
+                align-items: flex-start;
+
+                justify-content: center;
             }
 
-            .wish-card {
-                padding: 38px 22px;
+            .content {
+                width: 100%;
+
+                max-width: 600px;
             }
 
-            .wish-card h2 {
-                font-size: 31px;
+
+            /* INTRO */
+
+            .small-text {
+                font-size: 10px;
+
+                letter-spacing: 2.5px;
+
+                margin-bottom: 12px;
+            }
+
+            h1 {
+                font-size: clamp(44px, 13vw, 58px);
+
+                line-height: 1.05;
             }
 
             .subtitle {
-                font-size: 14px;
+                width: 100%;
+
+                max-width: 450px;
+
+                margin: 15px auto 30px;
+
+                font-size: 13px;
+
+                line-height: 1.7;
+            }
+
+
+            /* CARD */
+
+            .wish-card {
+                width: 100%;
+
+                padding: 32px 20px 30px;
+
+                border-radius: 25px;
+            }
+
+
+            /* LOCK */
+
+            .lock {
+                width: 62px;
+                height: 62px;
+
+                font-size: 27px;
+
+                margin-bottom: 16px;
+            }
+
+
+            .wish-card h2 {
+                font-size: 30px;
+
+                line-height: 1.1;
+            }
+
+            .wish-description {
+                font-size: 13px;
+
+                line-height: 1.75;
+            }
+
+
+            /* COUNT */
+
+            .count {
+                margin: 25px 0;
+            }
+
+            .number {
+                font-size: 48px;
+            }
+
+            .count-label {
+                font-size: 10px;
+
+                letter-spacing: 1.7px;
+            }
+
+
+            /* BUTTON */
+
+            .wish-button {
+                min-height: 48px;
+
+                padding: 14px 26px;
+
+                font-size: 13px;
+            }
+
+
+            /* FORM */
+
+            .wish-form {
+                margin-top: 22px;
+
+                padding: 20px 15px;
+
+                border-radius: 20px;
+            }
+
+            .form-title {
+                font-size: 25px;
+
+                line-height: 1.2;
+            }
+
+            textarea {
+                width: 100%;
+
+                height: 120px;
+
+                padding: 13px;
+
+                font-size: 13px;
             }
 
             .form-actions {
                 flex-direction: column;
+
+                gap: 10px;
             }
 
             .form-actions button {
                 width: 100%;
             }
+
+
+            /* SAVED */
+
+            .saved {
+                font-size: 19px;
+
+                padding: 12px 15px;
+            }
+
+
+            /* SEALED */
+
+            .sealed {
+                margin-top: 28px;
+
+                padding-top: 23px;
+            }
+
+            .sealed p {
+                font-size: 21px;
+
+                line-height: 1.3;
+            }
+
+            .sealed small {
+                font-size: 10px;
+            }
+
+
+            /* BACK */
+
+            .back {
+                margin-top: 25px;
+
+                font-size: 12px;
+
+                padding: 8px 12px;
+            }
         }
 
+
+        /* =========================
+           SMALL PHONES
+        ========================= */
 
         @media (max-width: 480px) {
 
             nav {
-                gap: 13px 17px;
+                left: 10px;
+                right: 10px;
+
+                gap: 10px 15px;
             }
 
             nav a {
-                font-size: 12px;
+                font-size: 11px;
             }
 
             .page {
-                padding-top: 135px;
+                padding-top: 125px;
+
+                padding-left: 12px;
+                padding-right: 12px;
             }
 
             h1 {
-                font-size: 48px;
+                font-size: 46px;
+            }
+
+            .subtitle {
+                font-size: 12.5px;
+
+                margin-bottom: 25px;
             }
 
             .wish-card {
-                padding: 32px 18px;
+                padding: 28px 16px;
+            }
+
+            .wish-card h2 {
+                font-size: 28px;
+            }
+
+            .wish-description {
+                font-size: 12.5px;
+            }
+
+            .number {
+                font-size: 45px;
             }
 
             .wish-button {
-                padding: 14px 25px;
+                width: 100%;
+            }
+
+            .lock {
+                width: 58px;
+                height: 58px;
+
+                font-size: 25px;
+            }
+
+            .sealed p {
+                font-size: 20px;
             }
         }
 
@@ -624,7 +841,7 @@
             For Us, Someday
         </a>
 
-    </nav> 
+    </nav>
 
 
     <!-- MAIN -->
@@ -715,8 +932,7 @@
                     <textarea
                         id="wishInput"
                         maxlength="200"
-                        placeholder="Something you want us to experience together...">
-                    </textarea>
+                        placeholder="Something you want us to experience together..."></textarea>
 
 
                     <div class="form-actions">
@@ -779,6 +995,8 @@
 
             </section>
 
+
+            <!-- BACK -->
 
             <button
                 class="back"
