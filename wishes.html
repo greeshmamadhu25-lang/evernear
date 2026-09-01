@@ -1,15 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
     <title>For Us, Someday</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
 
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+          rel="stylesheet">
+
 
     <style>
 
@@ -17,8 +27,15 @@
             box-sizing: border-box;
         }
 
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
         body {
             margin: 0;
+
             min-height: 100vh;
 
             font-family: "Inter", sans-serif;
@@ -31,11 +48,13 @@
                     rgba(255, 255, 255, 0.9),
                     transparent 32%
                 ),
+
                 radial-gradient(
                     circle at 80% 80%,
                     rgba(255, 210, 235, 0.65),
                     transparent 35%
                 ),
+
                 linear-gradient(
                     135deg,
                     #eee5ff,
@@ -46,46 +65,149 @@
         }
 
 
-        /* =========================
-           NAVIGATION
-        ========================= */
+        /* =================================
+           NAVIGATION HEADER
+        ================================= */
 
-        nav {
+        .site-header {
+
             position: fixed;
 
-            top: 22px;
-            right: 32px;
+            top: 0;
+            left: 0;
 
-            display: flex;
-            align-items: center;
-
-            gap: 30px;
+            width: 100%;
 
             z-index: 1000;
+
+            padding: 28px 20px 24px;
+
+            text-align: center;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(238, 229, 255, 0.94),
+                    rgba(255, 244, 250, 0.94)
+                );
+
+            backdrop-filter: blur(14px);
+
+            -webkit-backdrop-filter: blur(14px);
+
+            border-bottom:
+                1px solid rgba(255,255,255,0.5);
         }
 
+
+        /* =================================
+           ForYou
+        ================================= */
+
+        .site-title {
+
+            font-family:
+                "Cormorant Garamond",
+                serif;
+
+            font-size: 58px;
+
+            font-weight: 600;
+
+            line-height: 1;
+
+            color: #2f2348;
+
+            text-align: center;
+
+            margin: 0 0 30px;
+        }
+
+
+        /* =================================
+           NAVIGATION LINKS
+        ================================= */
+
+        nav {
+
+            width: 100%;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            flex-wrap: wrap;
+
+            gap: 20px 42px;
+
+            margin: 0 auto;
+
+            text-align: center;
+        }
+
+
         nav a {
+
             position: relative;
+
+            display: block;
 
             text-decoration: none;
 
             color: #302b40;
 
-            font-size: 15px;
+            font-family:
+                "Inter",
+                sans-serif;
+
+            font-size: 20px;
+
             font-weight: 400;
 
-            transition: 0.3s ease;
+            white-space: nowrap;
+
+            transition:
+                color 0.3s ease;
         }
+
 
         nav a:hover {
+
             color: #9a68d8;
         }
+
+
+        /* =================================
+           FOR US, SOMEDAY
+           SECOND ROW
+        ================================= */
+
+        nav a:last-child {
+
+            flex-basis: 100%;
+
+            text-align: center;
+
+            margin-top: 4px;
+        }
+
+
+        /* =================================
+           ACTIVE PAGE
+        ================================= */
 
         nav a.active {
+
             color: #9a68d8;
+
+            font-weight: 500;
         }
 
+
         nav a.active::after {
+
             content: "";
 
             position: absolute;
@@ -93,21 +215,22 @@
             left: 0;
             right: 0;
 
-            bottom: -9px;
+            bottom: -8px;
 
             height: 3px;
 
-            border-radius: 10px;
+            border-radius: 999px;
 
             background: #a56ce0;
         }
 
 
-        /* =========================
+        /* =================================
            MAIN PAGE
-        ========================= */
+        ================================= */
 
         .page {
+
             min-height: 100vh;
 
             width: 100%;
@@ -115,12 +238,18 @@
             display: flex;
 
             justify-content: center;
+
             align-items: center;
 
-            padding: 110px 25px 70px;
+            padding:
+                300px
+                25px
+                70px;
         }
 
+
         .content {
+
             width: 100%;
 
             max-width: 720px;
@@ -129,11 +258,12 @@
         }
 
 
-        /* =========================
+        /* =================================
            INTRO
-        ========================= */
+        ================================= */
 
         .small-text {
+
             margin-bottom: 14px;
 
             font-size: 12px;
@@ -145,19 +275,32 @@
             color: #8c8498;
         }
 
+
         h1 {
+
             margin: 0;
 
-            font-family: "Cormorant Garamond", serif;
+            font-family:
+                "Cormorant Garamond",
+                serif;
 
-            font-size: clamp(48px, 8vw, 72px);
+            font-size:
+                clamp(
+                    48px,
+                    8vw,
+                    72px
+                );
 
             font-weight: 500;
+
+            line-height: 1;
 
             color: #302746;
         }
 
+
         .subtitle {
+
             max-width: 500px;
 
             margin: 15px auto 35px;
@@ -170,45 +313,72 @@
         }
 
 
-        /* =========================
+        /* =================================
            WISH CARD
-        ========================= */
+        ================================= */
 
         .wish-card {
+
             width: 100%;
 
             max-width: 620px;
 
             margin: 0 auto;
 
-            padding: 45px 35px;
+            padding:
+                45px
+                35px;
 
             border-radius: 28px;
 
-            background: rgba(255, 255, 255, 0.68);
+            background:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.68
+                );
 
-            border: 1px solid rgba(255, 255, 255, 0.85);
+            border:
+                1px solid
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.85
+                );
 
             box-shadow:
-                0 20px 60px rgba(106, 72, 140, 0.12);
+                0 20px 60px
+                rgba(
+                    106,
+                    72,
+                    140,
+                    0.12
+                );
 
             backdrop-filter: blur(14px);
+
+            -webkit-backdrop-filter: blur(14px);
         }
 
 
-        /* =========================
+        /* =================================
            LOCK
-        ========================= */
+        ================================= */
 
         .lock {
+
             width: 70px;
             height: 70px;
 
-            margin: 0 auto 18px;
+            margin:
+                0 auto 18px;
 
             display: flex;
 
             justify-content: center;
+
             align-items: center;
 
             border-radius: 50%;
@@ -223,20 +393,38 @@
             font-size: 30px;
 
             box-shadow:
-                0 10px 25px rgba(130, 90, 170, 0.12);
+                0 10px 25px
+                rgba(
+                    130,
+                    90,
+                    170,
+                    0.12
+                );
 
             transition: 0.3s ease;
         }
 
+
         .lock:hover {
-            transform: scale(1.06) rotate(-3deg);
+
+            transform:
+                scale(1.06)
+                rotate(-3deg);
         }
 
 
-        .wish-card h2 {
-            margin: 0 0 12px;
+        /* =================================
+           CARD TITLE
+        ================================= */
 
-            font-family: "Cormorant Garamond", serif;
+        .wish-card h2 {
+
+            margin:
+                0 0 12px;
+
+            font-family:
+                "Cormorant Garamond",
+                serif;
 
             font-size: 34px;
 
@@ -245,7 +433,9 @@
             color: #332b47;
         }
 
+
         .wish-description {
+
             max-width: 450px;
 
             margin: 0 auto;
@@ -258,18 +448,23 @@
         }
 
 
-        /* =========================
-           WISH COUNT
-        ========================= */
+        /* =================================
+           COUNT
+        ================================= */
 
         .count {
+
             margin: 30px 0;
         }
 
+
         .number {
+
             display: block;
 
-            font-family: "Cormorant Garamond", serif;
+            font-family:
+                "Cormorant Garamond",
+                serif;
 
             font-size: 55px;
 
@@ -278,7 +473,9 @@
             color: #8b5bc7;
         }
 
+
         .count-label {
+
             display: block;
 
             margin-top: 8px;
@@ -293,14 +490,17 @@
         }
 
 
-        /* =========================
-           BUTTON
-        ========================= */
+        /* =================================
+           MAIN BUTTON
+        ================================= */
 
         .wish-button {
+
             border: none;
 
-            padding: 15px 32px;
+            padding:
+                15px
+                32px;
 
             border-radius: 40px;
 
@@ -313,31 +513,58 @@
 
             color: white;
 
-            font-family: "Inter", sans-serif;
+            font-family:
+                "Inter",
+                sans-serif;
 
             font-size: 14px;
+
+            font-weight: 500;
 
             cursor: pointer;
 
             box-shadow:
-                0 12px 25px rgba(190, 76, 180, 0.25);
+                0 12px 25px
+                rgba(
+                    190,
+                    76,
+                    180,
+                    0.25
+                );
 
             transition: 0.3s ease;
         }
 
+
         .wish-button:hover {
-            transform: translateY(-3px);
+
+            transform:
+                translateY(-3px);
 
             box-shadow:
-                0 16px 30px rgba(190, 76, 180, 0.32);
+                0 16px 30px
+                rgba(
+                    190,
+                    76,
+                    180,
+                    0.32
+                );
         }
 
 
-        /* =========================
+        .wish-button:active {
+
+            transform:
+                scale(0.97);
+        }
+
+
+        /* =================================
            FORM
-        ========================= */
+        ================================= */
 
         .wish-form {
+
             display: none;
 
             margin-top: 25px;
@@ -346,22 +573,41 @@
 
             border-radius: 22px;
 
-            background: rgba(255, 255, 255, 0.75);
+            background:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.75
+                );
 
-            border: 1px solid rgba(255, 255, 255, 0.9);
+            border:
+                1px solid
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.9
+                );
         }
 
+
         .form-title {
+
             margin-bottom: 15px;
 
-            font-family: "Cormorant Garamond", serif;
+            font-family:
+                "Cormorant Garamond",
+                serif;
 
             font-size: 27px;
 
             color: #382f4b;
         }
 
+
         textarea {
+
             width: 100%;
 
             height: 125px;
@@ -370,29 +616,50 @@
 
             resize: none;
 
-            border: 1px solid #ddd4e5;
+            border:
+                1px solid
+                #ddd4e5;
 
             border-radius: 16px;
 
             outline: none;
 
-            background: rgba(255, 255, 255, 0.8);
+            background:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.8
+                );
 
             color: #3c3548;
 
-            font-family: "Inter", sans-serif;
+            font-family:
+                "Inter",
+                sans-serif;
 
             font-size: 14px;
         }
 
+
         textarea:focus {
-            border-color: #b28bd3;
+
+            border-color:
+                #b28bd3;
 
             box-shadow:
-                0 0 0 3px rgba(178, 139, 211, 0.10);
+                0 0 0 3px
+                rgba(
+                    178,
+                    139,
+                    211,
+                    0.10
+                );
         }
 
+
         .form-actions {
+
             margin-top: 15px;
 
             display: flex;
@@ -402,7 +669,9 @@
             gap: 10px;
         }
 
+
         .cancel {
+
             background: #e9e2ef;
 
             color: #665b70;
@@ -410,23 +679,28 @@
             box-shadow: none;
         }
 
+
         .cancel:hover {
+
             background: #e3dbe9;
 
             box-shadow: none;
         }
 
 
-        /* =========================
+        /* =================================
            SAVED MESSAGE
-        ========================= */
+        ================================= */
 
         .saved {
+
             display: none;
 
             margin-top: 20px;
 
-            padding: 13px 18px;
+            padding:
+                13px
+                18px;
 
             border-radius: 30px;
 
@@ -439,25 +713,37 @@
 
             color: #68567b;
 
-            font-family: "Cormorant Garamond", serif;
+            font-family:
+                "Cormorant Garamond",
+                serif;
 
             font-size: 21px;
         }
 
 
-        /* =========================
+        /* =================================
            SEALED MESSAGE
-        ========================= */
+        ================================= */
 
         .sealed {
+
             margin-top: 32px;
 
             padding-top: 25px;
 
-            border-top: 1px solid rgba(120, 100, 140, 0.12);
+            border-top:
+                1px solid
+                rgba(
+                    120,
+                    100,
+                    140,
+                    0.12
+                );
         }
 
+
         .sealed-title {
+
             margin-bottom: 10px;
 
             font-size: 10px;
@@ -469,17 +755,23 @@
             color: #a39aa9;
         }
 
+
         .sealed p {
+
             margin: 0;
 
-            font-family: "Cormorant Garamond", serif;
+            font-family:
+                "Cormorant Garamond",
+                serif;
 
             font-size: 23px;
 
             color: #665b72;
         }
 
+
         .sealed small {
+
             display: block;
 
             margin-top: 8px;
@@ -490,11 +782,12 @@
         }
 
 
-        /* =========================
+        /* =================================
            BACK BUTTON
-        ========================= */
+        ================================= */
 
         .back {
+
             margin-top: 28px;
 
             border: none;
@@ -503,7 +796,9 @@
 
             color: #7d7485;
 
-            font-family: "Inter", sans-serif;
+            font-family:
+                "Inter",
+                sans-serif;
 
             font-size: 13px;
 
@@ -512,90 +807,114 @@
             transition: 0.3s ease;
         }
 
+
         .back:hover {
+
             color: #9a68d8;
 
-            transform: translateX(-3px);
+            transform:
+                translateX(-3px);
         }
 
 
-        /* =========================
-           TABLET & MOBILE
-        ========================= */
+        /* =================================
+           MOBILE
+        ================================= */
 
         @media (max-width: 700px) {
 
-            /* NAVIGATION */
+            .site-header {
+
+                padding:
+                    18px
+                    10px
+                    18px;
+            }
+
+
+            .site-title {
+
+                font-size: 42px;
+
+                margin-bottom: 22px;
+            }
+
 
             nav {
-                position: absolute;
 
-                top: 18px;
-
-                left: 15px;
-                right: 15px;
-
-                justify-content: center;
-
-                flex-wrap: wrap;
-
-                gap: 12px 20px;
+                gap:
+                    12px
+                    20px;
             }
+
 
             nav a {
-                font-size: 13px;
+
+                font-size: 15px;
             }
 
+
+            nav a:last-child {
+
+                flex-basis: 100%;
+
+                margin-top: 3px;
+            }
+
+
             nav a.active::after {
+
                 bottom: -6px;
 
                 height: 2px;
             }
 
 
-            /* PAGE */
-
             .page {
+
                 min-height: 100vh;
 
-                padding: 135px 15px 45px;
+                padding:
+                    250px
+                    15px
+                    45px;
 
-                display: flex;
-
-                align-items: flex-start;
-
-                justify-content: center;
+                align-items:
+                    flex-start;
             }
 
-            .content {
-                width: 100%;
-
-                max-width: 600px;
-            }
-
-
-            /* INTRO */
 
             .small-text {
+
                 font-size: 10px;
 
                 letter-spacing: 2.5px;
-
-                margin-bottom: 12px;
             }
 
+
             h1 {
-                font-size: clamp(44px, 13vw, 58px);
+
+                font-size:
+                    clamp(
+                        44px,
+                        13vw,
+                        58px
+                    );
 
                 line-height: 1.05;
             }
 
+
             .subtitle {
+
                 width: 100%;
 
                 max-width: 450px;
 
-                margin: 15px auto 30px;
+                margin:
+                    15px
+                    auto
+                    30px;
 
                 font-size: 13px;
 
@@ -603,20 +922,21 @@
             }
 
 
-            /* CARD */
-
             .wish-card {
+
                 width: 100%;
 
-                padding: 32px 20px 30px;
+                padding:
+                    32px
+                    20px
+                    30px;
 
                 border-radius: 25px;
             }
 
 
-            /* LOCK */
-
             .lock {
+
                 width: 62px;
                 height: 62px;
 
@@ -627,64 +947,75 @@
 
 
             .wish-card h2 {
+
                 font-size: 30px;
 
                 line-height: 1.1;
             }
 
+
             .wish-description {
+
                 font-size: 13px;
 
                 line-height: 1.75;
             }
 
 
-            /* COUNT */
-
             .count {
-                margin: 25px 0;
+
+                margin:
+                    25px 0;
             }
 
+
             .number {
+
                 font-size: 48px;
             }
 
+
             .count-label {
+
                 font-size: 10px;
 
                 letter-spacing: 1.7px;
             }
 
 
-            /* BUTTON */
-
             .wish-button {
+
                 min-height: 48px;
 
-                padding: 14px 26px;
+                padding:
+                    14px
+                    26px;
 
                 font-size: 13px;
             }
 
 
-            /* FORM */
-
             .wish-form {
+
                 margin-top: 22px;
 
-                padding: 20px 15px;
+                padding:
+                    20px
+                    15px;
 
                 border-radius: 20px;
             }
 
+
             .form-title {
+
                 font-size: 25px;
 
                 line-height: 1.2;
             }
 
+
             textarea {
-                width: 100%;
 
                 height: 120px;
 
@@ -693,169 +1024,246 @@
                 font-size: 13px;
             }
 
+
             .form-actions {
+
                 flex-direction: column;
 
                 gap: 10px;
             }
 
+
             .form-actions button {
+
                 width: 100%;
             }
 
 
-            /* SAVED */
-
             .saved {
+
                 font-size: 19px;
 
-                padding: 12px 15px;
+                padding:
+                    12px
+                    15px;
             }
 
 
-            /* SEALED */
-
             .sealed {
+
                 margin-top: 28px;
 
                 padding-top: 23px;
             }
 
+
             .sealed p {
+
                 font-size: 21px;
 
                 line-height: 1.3;
             }
 
+
             .sealed small {
+
                 font-size: 10px;
             }
 
 
-            /* BACK */
-
             .back {
+
                 margin-top: 25px;
 
                 font-size: 12px;
 
-                padding: 8px 12px;
+                padding:
+                    8px
+                    12px;
             }
+
         }
 
 
-        /* =========================
+        /* =================================
            SMALL PHONES
-        ========================= */
+        ================================= */
 
         @media (max-width: 480px) {
 
-            nav {
-                left: 10px;
-                right: 10px;
+            .site-header {
 
-                gap: 10px 15px;
+                padding:
+                    15px
+                    7px
+                    16px;
             }
+
+
+            .site-title {
+
+                font-size: 36px;
+
+                margin-bottom: 19px;
+            }
+
+
+            nav {
+
+                gap:
+                    10px
+                    15px;
+            }
+
 
             nav a {
-                font-size: 11px;
+
+                font-size: 12px;
             }
 
+
+            nav a:last-child {
+
+                margin-top: 2px;
+            }
+
+
+            nav a.active::after {
+
+                bottom: -5px;
+
+                height: 2px;
+            }
+
+
             .page {
-                padding-top: 125px;
+
+                padding-top: 230px;
 
                 padding-left: 12px;
+
                 padding-right: 12px;
             }
 
+
             h1 {
+
                 font-size: 46px;
             }
 
+
             .subtitle {
+
                 font-size: 12.5px;
 
                 margin-bottom: 25px;
             }
 
+
             .wish-card {
-                padding: 28px 16px;
+
+                padding:
+                    28px
+                    16px;
             }
 
+
             .wish-card h2 {
+
                 font-size: 28px;
             }
 
+
             .wish-description {
+
                 font-size: 12.5px;
             }
 
+
             .number {
+
                 font-size: 45px;
             }
 
+
             .wish-button {
+
                 width: 100%;
             }
 
+
             .lock {
+
                 width: 58px;
                 height: 58px;
 
                 font-size: 25px;
             }
 
+
             .sealed p {
+
                 font-size: 20px;
             }
+
         }
 
     </style>
+
 </head>
 
 
 <body>
 
 
-    <!-- NAVIGATION -->
+    <!-- =================================
+         NAVIGATION
+    ================================= -->
 
-    <div class="site-header">
+    <header class="site-header">
 
-    <div class="site-title">
-        ForYou
-    </div>
+        <div class="site-title">
+            ForYou
+        </div>
 
-    <nav>
 
-        <a href="index.html">
-            Home
-        </a>
+        <nav>
 
-        <a href="about.html">
-            About
-        </a>
+            <a href="index.html">
+                Home
+            </a>
 
-        <a href="letters.html">
-            Letters
-        </a>
+            <a href="about.html">
+                About
+            </a>
 
-        <a href="smile.html">
-            Need a Smile?
-        </a>
+            <a href="letters.html">
+                Letters
+            </a>
 
-        <a href="wishes.html" class="active">
-            For Us, Someday
-        </a>
+            <a href="smile.html">
+                Need a Smile?
+            </a>
 
-    </nav>
+            <a href="wishes.html"
+               class="active">
+                For Us, Someday
+            </a>
 
-</div>
+        </nav>
 
-    <!-- MAIN -->
+    </header>
+
+
+
+    <!-- =================================
+         MAIN
+    ================================= -->
 
     <main class="page">
 
         <div class="content">
+
 
             <div class="small-text">
                 A little place for our future
@@ -874,7 +1282,10 @@
             </p>
 
 
-            <!-- WISH CARD -->
+
+            <!-- =================================
+                 WISH CARD
+            ================================= -->
 
             <section class="wish-card">
 
@@ -896,6 +1307,7 @@
                 </p>
 
 
+
                 <!-- COUNT -->
 
                 <div class="count">
@@ -906,11 +1318,13 @@
                         0
                     </span>
 
+
                     <span class="count-label">
                         wishes waiting for us
                     </span>
 
                 </div>
+
 
 
                 <!-- ADD WISH -->
@@ -922,6 +1336,7 @@
                     + Leave a wish
 
                 </button>
+
 
 
                 <!-- FORM -->
@@ -968,7 +1383,8 @@
                 </div>
 
 
-                <!-- SAVED -->
+
+                <!-- SAVED MESSAGE -->
 
                 <div
                     class="saved"
@@ -979,9 +1395,11 @@
                 </div>
 
 
-                <!-- BOTTOM MESSAGE -->
+
+                <!-- SEALED MESSAGE -->
 
                 <div class="sealed">
+
 
                     <div class="sealed-title">
                         Sealed for now
@@ -997,10 +1415,12 @@
                         We'll open them together someday.
                     </small>
 
+
                 </div>
 
 
             </section>
+
 
 
             <!-- BACK -->
@@ -1019,7 +1439,13 @@
     </main>
 
 
+
+    <!-- =================================
+         JAVASCRIPT
+    ================================= -->
+
     <script>
+
 
         let wishes =
             JSON.parse(
@@ -1030,34 +1456,48 @@
         updateCount();
 
 
+
         function openForm() {
 
-            document.getElementById("wishForm").style.display =
-                "block";
+            document.getElementById(
+                "wishForm"
+            ).style.display = "block";
 
-            document.getElementById("wishInput").focus();
+
+            document.getElementById(
+                "wishInput"
+            ).focus();
 
         }
+
 
 
         function closeForm() {
 
-            document.getElementById("wishForm").style.display =
-                "none";
+            document.getElementById(
+                "wishForm"
+            ).style.display = "none";
 
-            document.getElementById("wishInput").value =
-                "";
+
+            document.getElementById(
+                "wishInput"
+            ).value = "";
 
         }
+
 
 
         function saveWish() {
 
             const input =
-                document.getElementById("wishInput");
+                document.getElementById(
+                    "wishInput"
+                );
+
 
             const wish =
                 input.value.trim();
+
 
 
             if (wish === "") {
@@ -1069,19 +1509,27 @@
             }
 
 
+
             wishes.push({
 
                 text: wish,
 
-                date: new Date().toLocaleDateString()
+                date:
+                    new Date()
+                    .toLocaleDateString()
 
             });
 
 
+
             localStorage.setItem(
+
                 "ourWishes",
+
                 JSON.stringify(wishes)
+
             );
+
 
 
             updateCount();
@@ -1090,36 +1538,49 @@
             input.value = "";
 
 
-            document.getElementById("wishForm").style.display =
-                "none";
+
+            document.getElementById(
+                "wishForm"
+            ).style.display = "none";
+
 
 
             const saved =
-                document.getElementById("savedMessage");
+                document.getElementById(
+                    "savedMessage"
+                );
 
 
-            saved.style.display =
-                "block";
+            saved.style.display = "block";
 
 
-            setTimeout(function() {
 
-                saved.style.display =
-                    "none";
+            setTimeout(
+                function() {
 
-            }, 2500);
+                    saved.style.display = "none";
+
+                },
+                2500
+            );
 
         }
+
 
 
         function updateCount() {
 
-            document.getElementById("wishCount").textContent =
+            document.getElementById(
+                "wishCount"
+            ).textContent =
                 wishes.length;
 
         }
 
+
     </script>
 
+
 </body>
+
 </html>
